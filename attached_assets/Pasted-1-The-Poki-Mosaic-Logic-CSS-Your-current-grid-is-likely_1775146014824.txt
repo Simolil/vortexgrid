@@ -1,0 +1,43 @@
+1. The "Poki" Mosaic Logic (CSS)
+Your current grid is likely using a standard uniform row. To get the "Poki" look where some icons are huge and others are small, you need to add Grid Span Logic.
+
+Add this to your CSS: ```css
+.game-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+grid-auto-rows: 140px;
+grid-auto-flow: dense; /* This is the secret for no gaps */
+gap: 15px;
+}
+.featured { grid-column: span 2; grid-row: span 2; }
+.tall { grid-row: span 2; }
+.wide { grid-column: span 2; }
+
+Why: This allows the "Featured" games to stand out and draw more clicks (higher ad revenue).
+
+2. The "Theater Mode" Toggle
+On your individual game pages, the game currently sits in a fixed box. We should add a Theater Mode button.
+
+What to add: A button with a "TV" icon next to the fullscreen button.
+
+Function: When clicked, it should use a simple JavaScript toggle to dim the rest of the site and expand the game iframe to 90% of the screen.
+
+Why: It keeps users on the page longer, which makes ad networks like Google AdSense see your site as "high quality."
+
+3. SEO "Academic" Footer (The Stealth Layer)
+Since you are using a paid domain, you need to protect it from being flagged as "just a game site" by school filters.
+
+What to add: A robust footer with links named "Research Modules," "Logic Documentation," and "STEM Resources."
+
+Content: Put a small paragraph of text under every game explaining the "Educational Logic" of the game (e.g., "This module tests spatial awareness and physics-based timing").
+
+Why: This provides the "Text-to-Code" ratio that Google looks for to approve your site for ads.
+
+4. Native Ad Containers
+Instead of "pop-up" ads that annoy people, we should add Native Ad Slots directly into your grid.
+
+What to add: Every 5th or 6th tile in your games.json should be an "Ad Tile."
+
+Style: It should have the same 20px border-radius and hover effect as a game icon, but contain a placeholder for an ad script.
+
+Why: This is how Poki makes millions—by making the ads feel like part of the "discovery" experience.
