@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VortexGrid – Free Online Games | Play Now!</title>
+    <meta name="description" content="Play free online games on VortexGrid. Action, racing, puzzle, platform games – no downloads, no sign-ups, just instant fun!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <a href="/" class="logo">
+            <div class="logo-icon">V</div>
+            <span>VortexGrid</span>
+        </a>
+        <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search games...">
+        </div>
+        <a href="#" class="youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>Subscribe</span>
+        </a>
+    </div>
+</header>
+
+<!-- Category Bar -->
+<nav class="category-bar">
+    <div class="container">
+        <button class="cat-btn active" data-category="all">🎮 All Games</button>
+        <button class="cat-btn" data-category="action">⚡ Action</button>
+        <button class="cat-btn" data-category="racing">🏎️ Racing</button>
+        <button class="cat-btn" data-category="sports">⚽ Sports</button>
+        <button class="cat-btn" data-category="puzzle">🧩 Puzzle</button>
+        <button class="cat-btn" data-category="platform">🕹️ Platform</button>
+        <button class="cat-btn" data-category="shooting">🎯 Shooting</button>
+        <button class="cat-btn" data-category="adventure">🗺️ Adventure</button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Free Online Games – Play Now!</h1>
+        <p>Discover thousands of free browser games. No downloads, no sign-ups – just click and play instantly.</p>
+        <div class="hero-stats">
+            <span><i class="fas fa-gamepad"></i> 50+ Games</span>
+            <span><i class="fas fa-bolt"></i> Instant Play</span>
+            <span><i class="fas fa-mobile-alt"></i> Any Device</span>
+        </div>
+    </div>
+</section>
+
+<!-- Games Grid -->
+<main class="main-content">
+    <div class="container">
+        <div class="section-header">
+            <h2>Popular Games</h2>
+            <p>Hand-picked favorites our players love</p>
+        </div>
+        <div class="games-grid" id="gamesGrid"></div>
+        <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No games found</h3>
+            <p>Try a different search term or category</p>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">VortexGrid</div>
+                <p>Your ultimate destination for free online browser games. Play anytime, anywhere.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Quick Links</h4>
+                    <a href="/">Home</a>
+                    <a href="/about.html">About</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+                <div class="link-group">
+                    <h4>Legal</h4>
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                </div>
+                <div class="link-group">
+                    <h4>Follow Us</h4>
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-discord"></i> Discord</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 VortexGrid. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="games.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading... | VortexGrid</title>
+    <meta name="description" content="Play free online games on VortexGrid">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .game-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+        .game-container {
+            background: #1a1a2e;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            margin-bottom: 32px;
+        }
+        .game-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .game-info-page {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+        .game-title-page {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .game-desc {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .game-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .meta-tag {
+            background: var(--gray);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gray);
+            padding: 10px 20px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            margin-bottom: 24px;
+            transition: all 0.2s;
+        }
+        .back-btn:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+        .related-section {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+        }
+        .related-section h3 {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .related-card {
+            text-decoration: none;
+            color: var(--text);
+            transition: transform 0.2s;
+        }
+        .related-card:hover {
+            transform: translateY(-4px);
+        }
+        .related-thumb {
+            aspect-ratio: 1 / 1;
+            background: var(--gray);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+        .related-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .related-title {
+            font-weight: 600;
+            font-size: 13px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .game-title-page { font-size: 24px; }
+            .game-info-page { padding: 20px; }
+            .related-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="/" class="logo">
+            <div class="logo-icon">V</div>
+            <span>VortexGrid</span>
+        </a>
+        <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search games...">
+        </div>
+        <a href="#" class="youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>Subscribe</span>
+        </a>
+    </div>
+</header>
+
+<main class="game-page">
+    <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Games</a>
+    
+    <div class="game-container" id="gameContainer">
+        <iframe id="gameFrame" src="" allowfullscreen></iframe>
+    </div>
+    
+    <div class="game-info-page">
+        <h1 class="game-title-page" id="gameTitle">Loading...</h1>
+        <p class="game-desc" id="gameDesc">Loading game information...</p>
+        <div class="game-meta">
+            <span class="meta-tag" id="gameCategory">-</span>
+            <span class="meta-tag"><i class="fas fa-bolt"></i> Free to Play</span>
+            <span class="meta-tag"><i class="fas fa-mouse-pointer"></i> Instant Play</span>
+        </div>
+    </div>
+    
+    <div class="related-section">
+        <h3><i class="fas fa-fire"></i> More Games You'll Love</h3>
+        <div class="related-grid" id="relatedGrid"></div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">VortexGrid</div>
+                <p>Your ultimate destination for free online browser games. Play anytime, anywhere.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group"><h4>Quick Links</h4><a href="/">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></div>
+                <div class="link-group"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></div>
+                <div class="link-group"><h4>Follow Us</h4><a href="#"><i class="fab fa-youtube"></i> YouTube</a><a href="#"><i class="fab fa-twitter"></i> Twitter</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 VortexGrid. All rights reserved.</p></div>
+    </div>
+</footer>
+
+<script src="games.js"></script>
+<script>
+    // Get game ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const gameId = params.get('id');
+    
+    if (gameId) {
+        const game = getGameById(gameId);
+        if (game) {
+            document.title = `${game.title} | Play Free Online | VortexGrid`;
+            document.getElementById('gameTitle').textContent = game.title;
+            document.getElementById('gameDesc').textContent = game.description;
+            document.getElementById('gameCategory').textContent = game.category.charAt(0).toUpperCase() + game.category.slice(1);
+            document.getElementById('gameFrame').src = game.embedUrl;
+            
+            // Show related games (exclude current)
+            const related = GAMES.filter(g => g.id !== game.id).slice(0, 6);
+            document.getElementById('relatedGrid').innerHTML = related.map(g => `
+                <a href="/play.html?id=${g.id}" class="related-card">
+                    <div class="related-thumb"><img src="${g.thumbnail}" alt="${g.title}"></div>
+                    <div class="related-title">${g.title}</div>
+                </a>
+            `).join('');
+        } else {
+            document.getElementById('gameTitle').textContent = 'Game Not Found';
+            document.getElementById('gameDesc').textContent = 'Sorry, we couldn\'t find that game.';
+        }
+    }
+    
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && searchInput.value.trim()) {
+                window.location.href = `/?q=${encodeURIComponent(searchInput.value.trim())}`;
+            }
+        });
+    }
+</script>
+</body>
+</html>
